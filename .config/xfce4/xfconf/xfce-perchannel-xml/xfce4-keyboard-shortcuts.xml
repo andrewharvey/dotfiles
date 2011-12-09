@@ -9,6 +9,9 @@
       <property name="&lt;Primary&gt;grave" type="string" value="gnome-terminal"/>
       <property name="&lt;Super&gt;space" type="string" value="xfrun4"/>
       <property name="&lt;Super&gt;grave" type="string" value="gedit --new-window"/>
+      <property name="XF86AudioPause" type="string" value="banshee --toggle-playing"/>
+      <property name="XF86AudioNext" type="string" value="banshee --next"/>
+      <property name="&lt;Primary&gt;XF86AudioNext" type="string" value="banshee --previous"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
