@@ -1,0 +1,11 @@
+[user]
+	name = Andrew Harvey
+	email = andrew.harvey4@gmail.com
+[color]
+	ui = true
+[diff]
+	tool = kompare
+[difftool]
+	prompt = false
+[alias]
+	s = status
