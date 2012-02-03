@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://josm.openstreetmap.de/preferences-1.0" version="4878">
+  <tag key='expert' value='true'/>
+  <!-- use the fosm API rather than the osm.org one -->
+  <tag key='osm-server.url' value='http://api.fosm.org/api'/>
+  <tag key='osm-server.upload-strategy' value='singlerequest'/>
+  <list key='imagery.layers.sites'>
+    <!-- add default JOSM imagery sources -->
+    <entry value='http://josm.openstreetmap.de/maps'/>
+    <!-- add NearMap imagery from near Sydney -->
+    <entry value='http://tianjara.net/cgi-bin/nearmap-to-josm-imagery.pl?lat=-33.87341&amp;lon=151.22543'/>
+  </list>
+  <tag key='imagery.tms.autoload' value='true'/>
+  <tag key='imagery.tms.autozoom' value='true'/>
+  <tag key='imagery.tms.max_zoom_lvl' value='24'/>
+  <tag key='laf' value='com.sun.java.swing.plaf.gtk.GTKLookAndFeel'/>
+</preferences>
