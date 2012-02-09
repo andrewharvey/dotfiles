@@ -14,4 +14,7 @@
   <tag key='imagery.tms.autozoom' value='true'/>
   <tag key='imagery.tms.max_zoom_lvl' value='24'/>
   <tag key='laf' value='com.sun.java.swing.plaf.gtk.GTKLookAndFeel'/>
+  <!-- I don't upload to OSM.org so don't tell me about your problems -->
+  <tag key='url.licensechange' value=''/>
+  <tag key='url.licensechange_reject' value=''/>
 </preferences>
