@@ -9,3 +9,4 @@
 	prompt = false
 [alias]
 	s = status
+	c = commit -S
