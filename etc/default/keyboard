@@ -1,0 +1,24 @@
+# Check /usr/share/doc/keyboard-configuration/README.Debian for
+# documentation on what to do after having modified this file.
+
+# The following variables describe your keyboard and can have the same
+# values as the XkbModel, XkbLayout, XkbVariant and XkbOptions options
+# in /etc/X11/xorg.conf.
+
+# Valid values are defined in /usr/share/doc/keyboard-configuration/xorg.lst
+
+XKBMODEL="pc104"
+XKBLAYOUT="us"
+XKBVARIANT="dvorak"
+
+# Options:
+#  * allow ctrl_alt_bksp to kill X
+#  * make caps an additional escape (handy for vim)
+#    perhaps though it should be backspace, and just use Ctrl+C in vim?
+XKBOPTIONS="terminate:ctrl_alt_bksp,caps:escape"
+
+# If you don't want to use the XKB layout on the console, you can
+# specify an alternative keymap.  Make sure it will be accessible
+# before /usr is mounted.
+# KMAP=/etc/console-setup/defkeymap.kmap.gz
+BACKSPACE="guess"
