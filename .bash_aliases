@@ -1,23 +1,34 @@
-# my custom bash aliases
+# directory listing
 alias s='ls'
 alias la='ls -lhA' #. files + human readable sizes + list mode
 alias a='la'
 
-alias aptcs='apt-cache search'
-alias aptgi='sudo apt-get install'
-
+# wget with --spider mode and --server-response headers
 alias wss='wget -S --spider'
 
+# typo
 alias cdmod='chmod'
 
+# change up directories
 alias u='cd ..'
 alias uu='cd ../../'
 alias uuu='cd ../../../'
 alias uuuu='cd ../../../../'
 
+# git status
 alias gits='git s'
 
+# disk usage
 alias dud='du -csh'
+
+# make and change directory
+alias mc='mkdir $1 && cd $1'
+
+# apt-get update && upgrade
+alias aptuu='sudo apt-get update && sudo apt-get upgrade'
+
+# start an HTTP server here
+alias http='python -m SimpleHTTPServer $1'
 
 # env variables for Debian packaging
 export DEBEMAIL=andrew.harvey4@gmail.com
