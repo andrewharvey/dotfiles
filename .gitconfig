@@ -10,3 +10,5 @@
 [alias]
 	s = status
 	c = commit -S
+	psh = push
+	b = branch
