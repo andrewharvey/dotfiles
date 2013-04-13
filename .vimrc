@@ -26,9 +26,24 @@ set expandtab
 set softtabstop=4
 set shiftwidth=4
 
+" wrap lines
+set tw=80
+
 " line numberings
 set number
 set relativenumber
 
 " spell checking
 set spell
+
+" give ; the same effect as : (so you don't need the Ctrl)
+nnoremap ; :
+
+" save file using sudo
+cmap w!! w !sudo tee % >/dev/null
+
+set showmatch
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
