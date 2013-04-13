@@ -30,6 +30,9 @@ alias aptuu='sudo apt-get update && sudo apt-get upgrade'
 # start an HTTP server here
 alias http='python -m SimpleHTTPServer $1'
 
+# shutdown the machine
+alias halt='sudo shutdown -h now'
+
 # env variables for Debian packaging
 export DEBEMAIL=andrew.harvey4@gmail.com
 export DEBFULLNAME="Andrew Harvey"
