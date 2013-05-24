@@ -10,6 +10,7 @@ alias wss='wget -S --spider'
 alias cdmod='chmod'
 
 # change up directories
+alias ..='cd ..'
 alias u='cd ..'
 alias uu='cd ../../'
 alias uuu='cd ../../../'
