@@ -1,0 +1,3 @@
+function uuuu
+	cd ../../../../; 
+end
