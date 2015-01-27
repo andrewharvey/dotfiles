@@ -12,3 +12,4 @@
 	c = commit -S
 	psh = push
 	b = branch
+	unstage = reset HEAD
