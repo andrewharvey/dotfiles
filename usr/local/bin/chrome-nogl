@@ -1,0 +1,4 @@
+#!/bin/sh
+
+dir=`mktemp -d`
+chromium  --user-data-dir="$dir" --disable-webgl && rm -rf "$dir"

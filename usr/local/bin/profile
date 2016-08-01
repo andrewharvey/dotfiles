@@ -1,0 +1,43 @@
+#!/bin/bash
+
+min_screen=10
+max_screen=`cat /sys/class/backlight/intel_backlight/max_brightness`
+
+min_kb=1
+max_kb=`cat /sys/devices/platform/asus-nb-wmi/leds/asus\:\:kbd_backlight/max_brightness`
+off_kb=0
+
+# 10..
+function screen_backlight {
+    echo $1 > /sys/class/backlight/intel_backlight/brightness
+}
+
+# 1..3
+function kb_backlight {
+    echo $1 > /sys/devices/platform/asus-nb-wmi/leds/asus\:\:kbd_backlight/brightness
+}
+
+case $1 in
+    night)
+        screen_backlight $min_screen
+        kb_backlight $min_kb
+        ;;
+    default)
+        screen_backlight 421
+        kb_backlight $off_kb
+        ;;
+    outdoor)
+        screen_backlight $max_screen
+        kb_backlight $max_kb
+        ;;
+    screen)
+        screen_backlight $2
+        ;;
+    keyboard)
+        kb_backlight $2
+        ;;
+    *)
+        echo "Usage: $0 night|default|outdoor"
+        ;;
+esac
+

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+b=`basename $0`
+
+case $1 in
+    mirror)
+        xrandr --output eDP1 --auto --output VGA1 --auto --same-as eDP1
+        xrandr --output eDP1 --auto --output HDMI1 --auto --same-as eDP1
+        ;;
+    above)
+        xrandr --output VGA1 --auto --above eDP1
+        xrandr --output HDMI1 --auto --above eDP1
+        ;;
+    right)
+        xrandr --output VGA1 --auto --right-of eDP1
+        xrandr --output HDMI1 --auto --right-of eDP1
+        ;;
+    none|off)
+        xrandr --output VGA1 --off
+        xrandr --output HDMI1 --off
+        ;;
+    info)
+        xrandr
+        ;;
+    *)
+        echo "Usage: $b mirror|above|right|none"
+        ;;
+esac
