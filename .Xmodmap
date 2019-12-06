@@ -1,0 +1,23 @@
+! https://wiki.archlinux.org/index.php/Xmodmap
+! http://wiki.linuxquestions.org/wiki/XF86_keyboard_symbols
+!
+! Find keycodes with `sudo showkey`
+
+! fn+f5, fn+f6
+keycode 224 = XF86MonBrightnessDown
+keycode 225 = XF86MonBrightnessUp
+
+! prt sc
+keycode 99 = Print
+
+! screen presentation key (fn+f8)
+keycode 125 = XF86Display
+
+! fn+esc
+keycode 240 = XF86Suspend
+
+! toggle touchpad fn+f6
+! keycode 191 = 
+
+keysym Super_L = Alt_L
+add Mod1 = Alt_L

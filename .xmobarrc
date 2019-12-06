@@ -1,0 +1,35 @@
+Config {
+    -- appearance
+      font = "xft:Liberation Mono:size=10"
+    , additionalFonts = [ "xft:FontAwesome:pixelsize=14" ] -- https://fontawesome.com/v4.7.0/cheatsheet
+    , bgColor = "black"
+    , fgColor = "grey"
+    , position = TopW L 100
+    , lowerOnStart = False
+
+    -- https://archives.haskell.org/projects.haskell.org/xmobar/
+    , commands = [
+        -- Run Weather "YSSY" ["-t","<station>: <tempC>C","-L","18","-H","26","--normal","green","--high","red","--low","lightblue"] 36000
+        -- , Run Network "wlp1s0" ["-L","0","-H","32","--normal","green","--high","red", "-t", "<fn=1></fn><rx> <fn=1></fn><tx>"] 40
+        -- , Run Network "enp0s20f0u3" ["-L","0","-H","32","--normal","green","--high","red", "-S", "True", "-t", "<fn=1></fn><rx> <fn=1></fn><tx>"] 40
+        -- , Run Cpu ["-t", "<total> <vbar>", "-L","3","-H","50","--normal","green","--high","red"] 20
+        -- , Run CpuFreq [] 20
+        -- , Run DynNetwork ["-S", "True", "-t", "network: <fn=1></fn><rx> <fn=1></fn><tx>"] 20
+        -- , Run Swap ["-t", "<used>M"] 20
+        -- , Run DiskIO [("/", "disk: <fn=1></fn><read> <fn=1></fn><write>")] [] 300
+        -- , Run Volume "default" "Master" [] 10
+        -- , Run Kbd [("us(dvorak)", "<fn=1></fn> dvorak"), ("us", "<fn=1></fn> qwerty")]
+        Run StdinReader
+        , Run Memory ["-t","<action=`gnome-system-monitor`><fn=1></fn> <usedratio>%</action>"] 50
+        , Run DiskU [("/", "<action=`baobab`><fn=1></fn> <free></action>")] ["-L", "10", "-H", "380", "--low", "red"] 300
+        , Run BatteryP ["BAT0"] ["-t", "<action=`gnome-power-statistics`><fn=1></fn> <acstatus> <fn=1></fn> <left>% <timeleft> remaining</action>"] 300
+        , Run CoreTemp ["-t", "<fn=1></fn> <core0>C"] 20
+        , Run Brightness ["-t", "<fn=1></fn> <percent>%","--", "-D", "intel_backlight"] 40
+        , Run Wireless "wlp1s0" ["-t", "<fn=1></fn> <essid> <quality>%"] 100
+        , Run Date "<action=`gnome-clocks`><fc=#caeebf><fn=1></fn> %a %b %_d %Y %l:%M%p</fc></action>" "date" 300
+        ]
+    , sepChar = "%"
+    , alignSep = "}{"
+    -- , template = "%cpu% %cpufreq% | %memory% | %diskio% | %dynnetwork% | %wlp1s0wi% | %kbd% }{ %disku% | %battery% | %coretemp% | %bright% | %date%"
+    , template = "%StdinReader% }{ %memory% | %disku% | %battery% | %coretemp% | %bright% | %wlp1s0wi%   | %date%"
+}
