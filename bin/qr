@@ -1,0 +1,4 @@
+#!/bin/sh
+
+tmp=`mktemp`.png
+qrencode -o $tmp "$1" && eog $tmp
